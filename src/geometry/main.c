@@ -46,9 +46,10 @@ int main(int argc, char* argv[])
         printf("\tperimeter = %f\n", get_circle_perimeter(&circles[i]));
         printf("\tarea = %f\n", get_circle_area(&circles[i]));
         printf("\tintersects:\n");
-        
+
         for (int j = 0; j < line_count; j++) {
-            if (i == j)continue;
+            if (i == j)
+                continue;
             if (circles_intersect(&circles[i], &circles[j])) {
                 printf("\t\t%d. circle\n", j + 1);
             }
